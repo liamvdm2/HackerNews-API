@@ -7,14 +7,18 @@
 body {
     font-family: 'Arial', sans-serif;
     padding: 20px;
+    background-color: rgb(54, 54, 54);
+    color: white;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa3f;
     padding: 10px 20px;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgb(0, 30, 255);
+    border-radius: 8px;
 }
 
 .navbar {
@@ -25,16 +29,20 @@ header {
 .navbar a {
     margin-right: 10px;
     text-decoration: none;
-    color: black;
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    transition: .5s;
 }
+
 .navbar a:hover {
     color: orange;
 }
+
 .container {
     max-width: 800px;
     margin: 20px auto;
 }
+
 .story {
     margin-bottom: 15px;
 }
@@ -53,20 +61,23 @@ header {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50px;
     border-top: 1px solid #dee2e6;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa3f;
+    border-radius: 8px;
 }
 
 .story-box {
-    border: 1px solid #ccc;
+    border: none;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #454141;
+    transition: .5s;
+}
+
+.story-box:hover {
+    box-shadow: 0 0 10px 1px white;
 }
 
 .story-box h3 {
@@ -86,6 +97,63 @@ footer {
     background-color: #0056b3;
 }
 /* Login side */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.682);
+    border-radius: 5px;
+    background-color: #373737;
+    margin-top: 50px; /* Adjust the margin-top to center vertically */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    border: 0.5px solid rgb(76, 73, 73);
+    transition: .5s;
+}
+
+input:hover {
+    padding: 10px;
+    box-shadow: 0 0 10px 1px white;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#loginMessage {
+    text-align: center;
+    margin-top: 16px;
+}
 
 
 /* Tablet landschap en groter */
