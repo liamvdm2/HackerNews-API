@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     padding: 20px;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -28,13 +29,38 @@ header {
     color: black;
     font-size: 20px;
 }
+
 .navbar a:hover {
     color: orange;
 }
+
 .container {
     max-width: 800px;
     margin: 20px auto;
 }
+
+.search-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#searchbar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .story {
     margin-bottom: 15px;
 }
@@ -61,6 +87,15 @@ footer {
     background-color: #f8f9fa;
 }
 
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: orange;
+}
+
 .story-box {
     border: 1px solid #ccc;
     padding: 10px;
@@ -85,26 +120,30 @@ footer {
 .story-box button:hover {
     background-color: #0056b3;
 }
+
 /* Login side */
 
 
 /* Tablet landschap en groter */
 @media only screen and (min-width: 768px) {
     .container {
-        max-width: 600px; /* Aanpassen aan jouw voorkeur */
+        max-width: 600px;
+        /* Aanpassen aan jouw voorkeur */
     }
 }
 
 /* Desktop en groter */
 @media only screen and (min-width: 992px) {
     .container {
-        max-width: 800px; /* Terug naar de oorspronkelijke breedte voor desktop */
+        max-width: 800px;
+        /* Terug naar de oorspronkelijke breedte voor desktop */
     }
 }
 
 /* Grote desktop en groter */
 @media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1000px; /* Aanpassen aan jouw voorkeur */
+        max-width: 1000px;
+        /* Aanpassen aan jouw voorkeur */
     }
 }

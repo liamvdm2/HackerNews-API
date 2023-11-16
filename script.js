@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const storiesPerPage = 10;
     let topStoryIds = [];
 
+/*     const searchbar = document.getElementById('searchbar');
+
+    searchbar.addEventListener('keyup', (event) => {
+      if (event.keyCode === 13) { // Enter key pressed
+        search();
+      }
+    });                                                                     // need to check if it works but now its a concept
+  
+    function search() {
+      const searchTerm = document.getElementById('searchbar').value.toLowerCase();
+      // Filter content based on searchTerm
+      // Update UI based on filtered content
+    } */
+
     function loadMoreStories() {
         console.log('Loading more stories...');
 
