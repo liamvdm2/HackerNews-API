@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 topStories.forEach(story => {
                     console.log('Adding story:', story.title);
 
-                    const storyDiv = document.createElement('div');
-                    storyDiv.classList.add('story');
+                    const storyBox = document.createElement('div');
+                    storyBox.classList.add('story-box'); // Voeg een nieuwe klasse toe voor de box
 
                     const title = document.createElement('h3');
                     title.innerText = story.title;
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         window.location.href = story.url;
                     });
 
-                    storyDiv.appendChild(title);
-                    storyDiv.appendChild(urlButton);
+                    storyBox.appendChild(title);
+                    storyBox.appendChild(urlButton);
 
-                    storiesContainer.appendChild(storyDiv);
+                    storiesContainer.appendChild(storyBox);
                 });
 
                 displayedStoryCount += storiesPerPage;
@@ -63,3 +63,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Voeg een eventlistener toe aan de "More" button
     moreButton.addEventListener('click', loadMoreStories);
 });
+
+
+// LOGIN
+
+function submitForm() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Perform client-side validation
+    if (username && password) {
+        // For a real application, you would make an AJAX request to the server here
+        // and handle the response accordingly. For simplicity, we'll just display a message.
+        const loginMessage = document.getElementById('loginMessage');
+        loginMessage.textContent = `Logged in as ${username}`;
+        loginMessage.style.color = 'green';
+    } else {
+        const loginMessage = document.getElementById('loginMessage');
+        loginMessage.textContent = 'Please enter both username and password.';
+        loginMessage.style.color = 'red';
+    }
+}
