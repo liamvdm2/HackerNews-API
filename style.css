@@ -104,7 +104,7 @@ footer {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.682);
     border-radius: 5px 30px;
     background-color: #373737;
-    margin-top: 50px; /* Adjust the margin-top to center vertically */
+    margin-top: 50px; 
 }
 
 .login-container h2 {
@@ -140,6 +140,7 @@ button {
     background-color: #007bff;
     color: #fff;
     padding: 10px;
+    margin: 5px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -156,23 +157,38 @@ button:hover {
 }
 
 
+.comments-container {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.comment-box {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #454141;
+}
+
+
 /* Tablet landschap en groter */
 @media only screen and (min-width: 768px) {
     .container {
-        max-width: 600px; /* Aanpassen aan jouw voorkeur */
+        max-width: 600px; 
     }
 }
 
 /* Desktop en groter */
 @media only screen and (min-width: 992px) {
     .container {
-        max-width: 800px; /* Terug naar de oorspronkelijke breedte voor desktop */
+        max-width: 800px; 
     }
 }
 
 /* Grote desktop en groter */
 @media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1000px; /* Aanpassen aan jouw voorkeur */
+        max-width: 1000px; 
     }
 }
