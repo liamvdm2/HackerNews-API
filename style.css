@@ -16,6 +16,12 @@ header {
     padding: 10px 20px;
     border-bottom: 1px solid #dee2e6;
 }
+
+.navbar {
+    width: 150px;
+
+}
+
 .navbar a {
     margin-right: 10px;
     text-decoration: none;
@@ -31,4 +37,74 @@ header {
 }
 .story {
     margin-bottom: 15px;
+}
+
+#moreButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#moreButton:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-top: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+.story-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.story-box h3 {
+    margin-bottom: 8px;
+}
+
+.story-box button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.story-box button:hover {
+    background-color: #0056b3;
+}
+/* Login side */
+
+
+/* Tablet landschap en groter */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 600px; /* Aanpassen aan jouw voorkeur */
+    }
+}
+
+/* Desktop en groter */
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 800px; /* Terug naar de oorspronkelijke breedte voor desktop */
+    }
+}
+
+/* Grote desktop en groter */
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1000px; /* Aanpassen aan jouw voorkeur */
+    }
 }
