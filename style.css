@@ -17,7 +17,7 @@ header {
     align-items: center;
     background-color: #f8f9fa3f;
     padding: 10px 20px;
-    border-bottom: 1px solid rgb(0, 30, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
 }
 
@@ -71,7 +71,7 @@ footer {
     border: none;
     padding: 10px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 5px 20px;
     background-color: #454141;
     transition: .5s;
 }
@@ -102,7 +102,7 @@ footer {
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.682);
-    border-radius: 5px;
+    border-radius: 5px 30px;
     background-color: #373737;
     margin-top: 50px; /* Adjust the margin-top to center vertically */
 }
