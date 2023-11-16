@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const storiesPerPage = 10;
     let topStoryIds = [];
 
+    function formatTimestamp(timestamp) {
+        const date = new Date(timestamp * 1000);
+        const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+        return date.toLocaleString('en-US', options);
+    }
+
     function loadMoreStories() {
         console.log('Loading more stories...');
 
@@ -27,10 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log('Adding story:', story.title);
 
                     const storyBox = document.createElement('div');
-                    storyBox.classList.add('story-box'); // Voeg een nieuwe klasse toe voor de box
+                    storyBox.classList.add('story-box');
 
                     const title = document.createElement('h3');
                     title.innerText = story.title;
+
+                    const time = document.createElement('p');
+                    time.innerText = `Published on: ${formatTimestamp(story.time)}`;
+
+                    const link = document.createElement('p');
+                    link.innerText = `${story.url}`;
 
                     const urlButton = document.createElement('button');
                     urlButton.innerText = 'Go to Link';
@@ -38,8 +50,21 @@ document.addEventListener('DOMContentLoaded', function () {
                         window.open(story.url, '_blank');
                     });
 
+                    const commentsButton = document.createElement('button');
+                    commentsButton.innerText = 'Comments';
+                    commentsButton.addEventListener('click', function () {
+                        loadAllComments(story.kids, storyBox);
+                    });
+
+                    const commentsCount = document.createElement('p');
+                    commentsCount.innerText = `Comments: ${story.kids ? story.kids.length : 0}`;
+
                     storyBox.appendChild(title);
+                    storyBox.appendChild(time);
+                    storyBox.appendChild(link);
                     storyBox.appendChild(urlButton);
+                    storyBox.appendChild(commentsButton);
+                    storyBox.appendChild(commentsCount);
 
                     storiesContainer.appendChild(storyBox);
                 });
@@ -57,30 +82,49 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Laad de eerste set verhalen bij het initialiseren van de pagina
+    function loadAllComments(commentIds, commentsContainer) {
+        const allCommentPromises = [];
+
+        function loadCommentsRecursively(ids) {
+            ids.forEach(id => {
+                allCommentPromises.push(
+                    fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+                        .then(response => response.json())
+                        .then(comment => {
+                            if (comment.kids) {
+                                return loadCommentsRecursively(comment.kids);
+                            }
+                            return comment;
+                        })
+                );
+            });
+        }
+
+        loadCommentsRecursively(commentIds);
+
+        Promise.all(allCommentPromises)
+            .then(allComments => {
+                console.log('All Comments:', allComments);
+
+                allComments.forEach(comment => {
+                    if (comment) {
+                        const commentDiv = document.createElement('div');
+                        commentDiv.classList.add('comment-box');
+
+                        const commentText = document.createElement('p');
+                        commentText.innerText = comment.text;
+
+                        commentDiv.appendChild(commentText);
+                        commentsContainer.appendChild(commentDiv);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error during fetch operation:', error);
+            });
+    }
+
     loadMoreStories();
 
-    // Voeg een eventlistener toe aan de "More" button
     moreButton.addEventListener('click', loadMoreStories);
 });
-
-
-// LOGIN
-
-function submitForm() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Perform client-side validation
-    if (username && password) {
-        // For a real application, you would make an AJAX request to the server here
-        // and handle the response accordingly. For simplicity, we'll just display a message.
-        const loginMessage = document.getElementById('loginMessage');
-        loginMessage.textContent = `Logged in as ${username}`;
-        loginMessage.style.color = 'green';
-    } else {
-        const loginMessage = document.getElementById('loginMessage');
-        loginMessage.textContent = 'Please enter both username and password.';
-        loginMessage.style.color = 'red';
-    }
-}
