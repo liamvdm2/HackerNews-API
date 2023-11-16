@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const urlButton = document.createElement('button');
                     urlButton.innerText = 'Go to Link';
                     urlButton.addEventListener('click', function () {
-                        window.location.href = story.url;
+                        window.open(story.url, '_blank');
                     });
 
                     storyBox.appendChild(title);
