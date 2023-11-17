@@ -11,20 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return date.toLocaleString('en-US', options);
     }
 
-    /*     const searchbar = document.getElementById('searchbar');
-
-    searchbar.addEventListener('keyup', (event) => {
-      if (event.keyCode === 13) { // Enter key pressed
-        search();
-      }
-    });                                                                     // need to check if it works but now its a concept
-  
-    function search() {
-      const searchTerm = document.getElementById('searchbar').value.toLowerCase();
-      // Filter content based on searchTerm
-      // Update UI based on filtered content
-    } */
-
     function loadMoreStories() {
         console.log('Loading more stories...');
 
@@ -127,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         commentDiv.classList.add('comment-box');
 
                         const commentText = document.createElement('p');
+                        commentText.classList.add('comment-text'); // Add a class for styling
                         commentText.innerText = comment.text;
 
                         commentDiv.appendChild(commentText);
