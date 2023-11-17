@@ -1,12 +1,13 @@
-function submitForm() {
+   // Register
+
+   function submitForm() {
     const name = document.getElementById('name').value;
-    const surname = document.getElementById('surname').value;
-    const email = document.getElementById('email').value;
     const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
     // Perform client-side validation
-    if (username && password && name && email && surname && password) {
+    if (username && password && name && email && username && password) {
         // Send data to server
         const registermessage = document.getElementById('registermessage');
         registermessage.textContent = `Registered successfully as ${username}`;
