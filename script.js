@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     time.innerText = `Published on: ${formatTimestamp(story.time)}`;
 
                     const link = document.createElement('p');
+                    link.classList.add('story-link');
                     link.innerText = `${story.url}`;
 
                     const urlButton = document.createElement('button');
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('All Comments:', allComments);
 
                 allComments.forEach(comment => {
-                    if (comment) {
+                    if (comment && commentsContainer) { // Check if commentsContainer is defined
                         const commentDiv = document.createElement('div');
                         commentDiv.classList.add('comment-box');
 
