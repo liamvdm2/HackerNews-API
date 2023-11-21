@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,31 +17,31 @@
             <a href="login.html">Login</a>
         </div>
     </header>
-
+  
     <div class="register-container">
         <h2>Register</h2>
         <form id="registerform">
-            <label for="surname">surname</label>
-            <input type="text" name="surname" id="surname">
-
-            <label for="name">name</label>
-            <input type="text" name="name" id="name">
-
-            <label for="username">username</label>
+            <label for="username">Username:</label>
             <input type="text" name="username" id="username">
-
-            <label for="email">email</label>
+            
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            
+            <label for="email">Email:</label>
             <input type="email" name="email" id="email">
-
-            <label for="password">password</label>
+            
+            <label for="password">Password:</label>
             <input type="password" name="password" id="password">
 
-            <button type="button" onclick="submitForm()">Register</button>
+            <span class="show-password" onclick="togglePassword()"><i class='bx bx-show'></i></span>
+
+            <button type="button" onclick="submitForm()">Register</button> <!-- function in register.js -->
 
         </form>
-        <p id="registermessage"></p>
+        <p id="registermessage"></p> <!-- message in register.js -->
     </div>
 
     <script src="register.js"></script>
+  
 </body>
 </html>
