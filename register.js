@@ -5,7 +5,7 @@ function submitForm() {
     const password = document.getElementById('password').value;
 
     // Perform client-side validation
-    if (name && username && email && password) {
+    if (name && username && email && password ) {
         // Send data to server
         const registermessage = document.getElementById('registermessage');
         registermessage.innerHTML = `Registered successfully as ${username}`;

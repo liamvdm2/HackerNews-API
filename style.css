@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+
+button {
+    cursor: pointer;
+    align-items: center ;
+}
 body {
     background-image: url(https://i.ytimg.com/vi/ouJq0oevLIg/maxresdefault.jpg);
     background-size: 100% 100%;
@@ -115,6 +120,7 @@ form select:hover {
 h3 {
     text-align: center;
 }
+
 
 .navbar {
     display: inline-flex;
