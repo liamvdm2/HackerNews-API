@@ -12,6 +12,7 @@ body {
     padding: 20px;
     color: white;
     background-attachment: fixed; /* Achtergrondafbeelding blijft vast tijdens het scrollen */
+    background-color: rgba(0, 0, 0, 0.559);
 }
 
 header {
@@ -24,6 +25,8 @@ header {
     border-radius: 8px;
 }
 
+
+/* Spotify balk styling */
 .spotify {
     max-width: 400px;
     margin: 0 auto;
@@ -34,6 +37,7 @@ header {
     margin-top: 50px;
 }
 
+/* Spotify logo styling */
 .spotify .logo {
     display: flex;
     justify-content: center;
@@ -42,16 +46,19 @@ header {
     border-bottom: 2px solid rgba(128, 128, 128, 0.393);
 }
 
+/* Spotify logo image styling */
 .spotify img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
 }
 
+/* Spotify form styling */
 .spotify .form-group {
     margin-bottom: 16px;
 }
 
+/* Spotify select styling */
 .spotify select {
     width: 100%;
     padding: 8px;
@@ -62,14 +69,17 @@ header {
     transition: 0.5s;
 }
 
+/* Spotify select hover styling */
 .spotify select:hover {
     box-shadow: 0 0 10px 1px white;
 }
 
+/* Spotify label styling */
 form label {
     color: #fff;
 }
 
+/* Form select styling */
 form select {
     width: 100%;
     padding: 8px;
@@ -83,11 +93,13 @@ form select {
     box-sizing: border-box;
 }
 
+/* Form select hover styling */
 form select:hover {
     transition: 0.5s;
     box-shadow: 0 0 10px 1px white;
 }
 
+/* Player container styling */
 .player-container {
     margin-top: 20px;
     padding: 20px;
@@ -161,17 +173,20 @@ h3 {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Adjust alignment as needed */
     align-items: center;
     background-color: rgb(54, 54, 54);
-    padding: 10px 20px;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    padding: 20px; /* Increased padding for a more balanced look */
+    border-top: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
+    color: white;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
+    color: white;
+    margin: 0 10px; /* Adjust spacing between links */
+    font-weight: bold; /* Enhance readability */
 }
 
 footer a:hover {
