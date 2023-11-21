@@ -3,9 +3,10 @@ function submitForm() {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const checkbox = document.getElementById('checkbox').checked;
 
     // Perform client-side validation
-    if (name && username && email && password) {
+    if (name && username && email && password && checkbox) {
         // Send data to server
         const registermessage = document.getElementById('registermessage');
         registermessage.innerHTML = `Registered successfully as ${username}`;
@@ -13,7 +14,7 @@ function submitForm() {
     } else {
         const registermessage = document.getElementById('registermessage');
         registermessage.innerHTML = 'Please enter all values';
-        registermessage.style.color = 'red';
+        registermessage.style.color = 'blue';
     }
 }
 
