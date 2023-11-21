@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,12 +25,17 @@
         <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
-
+        
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                
+                <span class="show-password" onclick="togglePassword()"><i class='bx bx-show'></i></span>
+            </div>
+        
             <button type="button" onclick="submitForm()">Login</button>
         </form>
+        
         <p id="loginMessage"></p>
         <p id="no-account">No account? <a href="register.html">Register</a></p>
         <p id="loginMessage"></p> 
@@ -37,5 +43,4 @@
 
 </body>
 <script src="login.js"></script>
-<script src="register.js"></script>
 </html>
