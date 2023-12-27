@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,7 @@ button {
     align-items: center ;
 }
 body {
-    background-image: url(https://i.ytimg.com/vi/ouJq0oevLIg/maxresdefault.jpg);
+    background-image: url('https://t4.ftcdn.net/jpg/05/65/36/85/360_F_565368520_phwt1VWyTMxuy9AQXs9swruTwPycQIyr.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     font-family: 'Arial', sans-serif;
@@ -18,13 +20,14 @@ body {
     color: white;
     background-attachment: fixed; /* Achtergrondafbeelding blijft vast tijdens het scrollen */
     background-color: rgba(0, 0, 0, 0.559);
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.343);
     padding: 10px 20px;
     border-bottom: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
@@ -40,6 +43,7 @@ header {
     border-radius: 5px;
     background-color: #373737;
     margin-top: 50px;
+    color: white;
 }
 
 /* Spotify logo styling */
@@ -48,7 +52,6 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 2px solid rgba(128, 128, 128, 0.393);
 }
 
 /* Spotify logo image styling */
@@ -59,24 +62,54 @@ header {
 }
 
 /* Spotify form styling */
+.spotify form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Spotify form styling */
 .spotify .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 /* Spotify select styling */
 .spotify select {
     width: 100%;
-    padding: 8px;
+    text-align: center;
+    padding: 10px;
     background-color: transparent;
     color: white;
     border-radius: 8px;
-    border: 0.5px solid rgb(76, 73, 73);
+    border: 1px solid rgb(76, 73, 73);
     transition: 0.5s;
 }
+
 
 /* Spotify select hover styling */
 .spotify select:hover {
     box-shadow: 0 0 10px 1px white;
+}
+
+/* Spotify label styling */
+.spotify label {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.spotify button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Spotify button hover styling */
+.spotify button:hover {
+    background-color: #0056b3;
 }
 
 /* Spotify label styling */
@@ -259,13 +292,15 @@ footer a:hover {
     padding: 20px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.682);
     border-radius: 5px;
-    background-color: #373737;
+    background-color: #3737372d;
     margin-top: 50px;
+    color: white;
 }
 
 .login-container h2,
 .register-container h2 {
     text-align: center;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
@@ -277,27 +312,27 @@ form {
 
 label {
     margin-bottom: 8px;
+    color: white;
 }
 
 input {
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 16px;
     background-color: transparent;
     color: white;
     border-radius: 8px;
-    border: 0.5px solid rgb(76, 73, 73);
+    border: 1px solid #fff;
     transition: 0.5s;
 }
 
 input:hover {
-    padding: 10px;
     box-shadow: 0 0 10px 1px white;
 }
 
 button {
     background-color: #007bff;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     margin: 5px;
     border: none;
     border-radius: 8px;
@@ -305,13 +340,38 @@ button {
     transition: 0.5s;
 }
 
+#password {
+    flex: 1;
+    border-radius: 8px;
+}
+
 button:hover {
     background-color: #0056b3;
 }
 
-#loginMessage {
+#loginMessage, #registermessage {
     text-align: center;
     margin-top: 16px;
+}
+
+.login-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#no-account {
+    margin-top: 17px;
+}
+
+#no-account a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#psd-forgot {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .comments-container {
@@ -352,6 +412,18 @@ button:hover {
     background-color: #0056b3;
 }
 
+.password-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
 @media only screen and (min-width: 576px) {
     form label {
         text-align: right;

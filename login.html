@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="kisspng-computer-icons-computer-security-hacker-hacker-vector-5ad96f91096043.8595878115241993130384.png">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -16,29 +17,29 @@
         <div class="navbar">
             <a href="index.html" id="News">News</a>
             <a href="login.html" id="loginLink" onclick="showLoginForm()">Login</a>
-            <a href="register.html">Register</a>
         </div>
     </header>
 
     <div class="login-container">
         <h2>Login</h2>
         <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" placeholder="Username" required>
         
-            <label for="password">Password:</label>
             <div class="password-container">
-                <input type="password" id="password" name="password" required>
-                
-                <span class="show-password" onclick="togglePassword()"><i class='bx bx-show'></i></span>
+                <div class="password-input-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span class="show-password" onclick="togglePassword()"><i class='bx bx-show'></i></span>
+                </div>
             </div>
         
             <button type="button" onclick="submitForm()">Login</button>
         </form>
         
         <p id="loginMessage"></p>
-        <p id="no-account">No account? <a href="register.html">Register</a></p>
-        <p id="loginMessage"></p> 
+        <div class="login-forgot">
+            <p id="no-account">No account? <a href="register.html">Register</a></p>
+            <a href="forgot-password.html" id="psd-forgot">Forgot password?</a>
+        </div>
     </div>
 
 </body>

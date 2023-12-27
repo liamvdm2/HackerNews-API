@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="kisspng-computer-icons-computer-security-hacker-hacker-vector-5ad96f91096043.8595878115241993130384.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,19 +22,22 @@
     <div class="register-container">
         <h2>Register</h2>
         <form id="registerform">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username">
-            
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name">
-            
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
-            
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password">
 
-            <span class="show-password" onclick="togglePassword()"><i class='bx bx-show'></i></span>
+            <input type="text" name="username" id="username" placeholder="Username">
+            
+            <input type="text" name="name" id="name" placeholder="Name">
+            
+            <input type="email" name="email" id="email" placeholder="Email">
+            
+            <div class="password-input-container">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="show-password" onclick="togglePassword()"><i class='bx bx-show'></i></span>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+                <label for="checkbox">I Agree With The Terms And Conditions</label>
+            </div>
 
             <button type="button" onclick="submitForm()">Register</button> <!-- function in register.js -->
 
